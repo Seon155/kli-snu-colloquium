@@ -216,6 +216,7 @@ function sched(t){
     }
     h += '<div class="it"><div class="t">'+x.t+'</div><div class="card">'+body+'</div></div>';
   });
+    h += '<div class="valid">'+svg('clock',14)+'<span>'+t.valid+'</span></div>';
   return h;
 }
 function render(){
