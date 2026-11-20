@@ -39,6 +39,7 @@ h3{margin:28px 0 8px;font-size:15px}
 p{margin:0 0 10px;line-height:1.75}
 .orgs{display:flex;gap:10px}
 .orgs div{flex:1;background:#fff;border:1px solid #DADDD6;border-radius:10px;min-height:64px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;font-weight:700;white-space:pre-line}
+.tel svg{flex:none}
 .tel{min-height:48px;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #DADDD6;border-radius:10px;padding:0 14px;color:#1E2824;text-decoration:none;font-weight:500}
 .sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
 .brk{display:flex;gap:12px;align-items:center;margin:8px 0;min-height:44px;padding:0 14px;background:#3F4E46;color:#fff;border-radius:10px}
@@ -123,10 +124,10 @@ ko:{
   about:"소개",
   aboutP:["탈탄소화와 전동화, 디지털 기술의 발전, 글로벌 경쟁 구도의 재편 속에서 자동차산업은 생산 체계와 고용, 노사관계까지 큰 변화를 겪고 있습니다.","이번 콜로키움은 미국·중국·독일의 전환 과정을 살펴보고 한국과 비교하며, 지속가능하고 사회적으로 정의로운 산업전환을 위한 정책적 시사점을 모색합니다."],
   orgsH:"주최", orgs:"한국노동연구원\nKLI|서울대학교\n아시아연구소",
-  ctH:"문의", ct:"국제협력팀 · 044-287-6092",
+  ctH:"문의", ct:"국제협력실 · 044-287-6092",
   prog:"프로그램", pd:"2026.11.26 (목)", chair:"사회",
   view:"발표자료 보기", soon:"발표자료 업로드 예정",
-  foot:"주최 한국노동연구원 · 서울대학교 아시아연구소<br>문의 국제협력팀 044-287-6092",
+  foot:"주최 한국노동연구원 · 서울대학교 아시아연구소<br>문의 국제협력실 044-287-6092",
   sched:[
    {b:"12:30–13:00",n:"등록"},
    {s:"세션 I",n:"자동차산업의 전환과 노동 – 국제비교",cn:"권현지",ca:"서울대학교"},
@@ -154,10 +155,10 @@ en:{
   about:"About",
   aboutP:["The global automotive industry is undergoing profound changes driven by decarbonization and electrification, advances in digital technologies, and the reshaping of global competition, affecting production systems, employment, and industrial relations.","The colloquium examines how work and employment are changing in the United States, China, and Germany, compares them with Korea, and explores policy implications for a sustainable and socially just industrial transition."],
   orgsH:"Organizers", orgs:"Korea Labor\nInstitute (KLI)|SNU Asia\nCenter (SNUAC)",
-  ctH:"Contact", ct:"International Cooperation Team · +82-44-287-6092",
+  ctH:"Contact", ct:"International Cooperation and Information Office · +82-44-287-6092",
   prog:"Program", pd:"Nov 26, 2026", chair:"Chair",
   view:"View slides", soon:"Slides coming soon",
-  foot:"Organized by Korea Labor Institute and the Seoul National University Asia Center<br>Inquiries International Cooperation Team +82-44-287-6092",
+  foot:"Organized by Korea Labor Institute and the Seoul National University Asia Center<br>Inquiries International Cooperation and Information Office +82-44-287-6092",
   sched:[
    {b:"12:30–1:00",n:"Registration"},
    {s:"Session I",n:"Automotive Industry Transition and Labor — An International Comparison",cn:"Hyunji Kwon",ca:"Seoul National University"},
@@ -194,7 +195,7 @@ function info(t){
    + '<iframe class="map" title="'+t.way+'" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q='+q+'&hl='+t.hl+'&z=16&output=embed"></iframe>'
    + '<a class="btn-o" href="'+link+'" target="_blank" rel="noopener">'+svg('pin',18)+t.map+'</a>'
    + '<h3>'+t.orgsH+'</h3><div class="orgs">'+t.orgs.split("|").map(function(x){return '<div>'+x+'</div>';}).join("")+'</div>'
-   + '<h3>'+t.ctH+'</h3><a class="tel" href="tel:+82442876092">'+svg('phone',18,'#3F4E46')+t.ct+'</a>';
+   + '<h3>'+t.ctH+'</h3><div class="tel">'+svg('phone',18,'#3F4E46')+'<span>'+t.ct+'</span></div>';
   return h;
 }
 function sched(t){
