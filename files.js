@@ -7,5 +7,5 @@ var FILES = {
   us: { ko: "", en: "" },
   cn: { ko: "", en: "" },
   de: { ko: "", en: "" },
-  kr: { ko: "", en: "" }
+  kr: { ko: "Session2. P1. Cho_EN.pdf", en: "Session2. P1. Cho_EN.pdf" }
 };
