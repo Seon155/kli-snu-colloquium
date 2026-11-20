@@ -85,11 +85,19 @@ footer{padding:24px 20px 32px;font-size:12px;line-height:1.6;color:#55645C;borde
    PDF를 materials 폴더에 넣고 아래 파일명을 채우면 '발표자료 보기' 버튼이 나타납니다.
    비워두면 '업로드 예정'으로 표시됩니다. */
 var FILES = {
-  us: "",
-  cn: "",
-  de: "",
-  kr: ""
+  us: { ko: "", en: "" },
+  cn: { ko: "", en: "" },
+  de: { ko: "", en: "" },
+  kr: { ko: "", en: "" }
 };
+/* 한글판·영문판이 따로 있으면 ko / en 에 각각 파일명을 적습니다.
+   한 파일만 쓰려면  us: "greer.pdf"  처럼 문자열 하나로 적으면 두 언어에 똑같이 연결됩니다.
+   한쪽 언어만 적으면 다른 언어 화면에는 '업로드 예정'이 표시됩니다. */
+function fileFor(key){
+  var f = FILES[key];
+  if(typeof f === "string") return f;
+  return (f && f[lang]) || "";
+}
 
 var ICON = {
   clock:'<path d="M12 7.5V12l3 2"/><circle cx="12" cy="12" r="8.5"/>',
@@ -196,7 +204,7 @@ function sched(t){
     if(x.s){ h += '<div class="ses"><span class="tag">'+x.s+'</span><div class="n">'+x.n+'</div><div class="c">'+x.c+'</div></div>'; return; }
     var body = '<div class="k">'+x.k+'</div>' + (x.n?'<div class="ti">'+x.n+'</div>':'') + '<div class="pp">'+x.p.map(function(p){return '<div>'+p+'</div>';}).join("")+'</div>';
     if(x.f){
-      var file = FILES[x.f];
+      var file = fileFor(x.f);
       body += file
         ? '<a class="dl" href="materials/'+encodeURIComponent(file)+'" download>'+svg('file',16)+'<span>'+t.view+'<small>'+file.split(".").pop().toUpperCase()+'</small></span></a>'
         : '<span class="soon">'+t.soon+'</span>';
