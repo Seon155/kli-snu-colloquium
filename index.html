@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KLI–SNU 공동 콜로키움</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#F6F6F2}
+a{-webkit-tap-highlight-color:transparent}
+.wrap{max-width:480px;margin:0 auto;background:#F6F6F2;color:#1E2824;font-family:'Noto Sans KR',sans-serif;font-size:14px;line-height:1.55;min-height:100vh}
+.hero{background:#3F4E46;color:#fff;padding:20px 20px 24px}
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:8px}
+.org{font-size:12px;font-weight:700;color:#E6E9E4}
+.lang{display:flex;border:1px solid #9AA89F;border-radius:6px;overflow:hidden;flex:none}
+.lang button{min-width:44px;min-height:32px;border:0;background:transparent;color:#fff;font:500 12px 'Noto Sans KR',sans-serif;cursor:pointer}
+.lang button.on{background:#fff;color:#1E2824;font-weight:700}
+.bar{width:36px;height:4px;background:#F2C300;margin-bottom:14px}
+h1{margin:0;font-size:23px;line-height:1.35;font-weight:700;word-break:keep-all}
+.sub{margin:6px 0 0;font-size:13px;line-height:1.5;color:#D5DBD6}
+.meta{margin-top:18px;display:flex;flex-direction:column;gap:8px;font-size:13px}
+.meta div{display:flex;gap:8px;align-items:flex-start}
+.meta svg{flex:none;margin-top:2px}
+nav{display:flex;background:#F6F6F2;border-bottom:1px solid #DADDD6;position:sticky;top:0;z-index:5}
+nav button{flex:1;min-height:48px;border:0;border-bottom:3px solid transparent;background:transparent;font:500 15px 'Noto Sans KR',sans-serif;color:#55645C;cursor:pointer}
+nav button.on{font-weight:700;color:#1E2824;border-bottom-color:#F2C300}
+main{padding:20px}
+h2{margin:0 0 4px;font-size:18px}
+h3{margin:28px 0 8px;font-size:15px}
+.row{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid #DADDD6}
+.ico{width:32px;height:32px;border-radius:16px;background:#E6E9E4;display:flex;align-items:center;justify-content:center;flex:none;color:#3F4E46}
+.lbl{font-size:12px;color:#55645C}
+.val{font-weight:500;line-height:1.5}
+.note{font-size:12px;color:#55645C}
+.btn-o{margin-top:14px;min-height:48px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:700;color:#3F4E46;background:#fff;border:1.5px solid #3F4E46;border-radius:10px;text-decoration:none}
+p{margin:0 0 10px;line-height:1.75}
+.orgs{display:flex;gap:10px}
+.orgs div{flex:1;background:#fff;border:1px solid #DADDD6;border-radius:10px;min-height:64px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;font-weight:700;white-space:pre-line}
+.tel{min-height:48px;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #DADDD6;border-radius:10px;padding:0 14px;color:#1E2824;text-decoration:none;font-weight:500}
+.sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.brk{display:flex;gap:12px;align-items:center;margin:6px 0;min-height:40px}
+.brk .t{width:64px;flex:none;font-size:12px;color:#55645C;font-weight:500}
+.brk .l{flex:1;border-top:1px dashed #B9C0B9;display:flex;align-items:center}
+.brk .l span{font-size:13px;font-weight:700;color:#55645C;background:#F6F6F2;padding-right:10px;margin-top:-2px}
+.ses{margin:24px 0 10px}
+.tag{display:inline-block;background:#F2C300;color:#1E2824;font-size:12px;font-weight:700;padding:2px 8px;border-radius:3px}
+.ses .n{font-size:16px;font-weight:700;margin-top:8px;line-height:1.4;word-break:keep-all}
+.ses .c{font-size:12px;color:#55645C}
+.it{display:flex;gap:12px;margin-bottom:10px}
+.it .t{width:64px;flex:none;font-size:12px;font-weight:500;color:#55645C;padding-top:14px;line-height:1.4}
+.card{flex:1;min-width:0;background:#fff;border:1px solid #DADDD6;border-radius:10px;padding:12px 14px}
+.card .k{font-size:12px;color:#55645C;font-weight:500}
+.card .ti{font-weight:700;font-size:15px;line-height:1.4;margin-top:2px;word-break:keep-all}
+.card .pp{font-size:13px;margin-top:4px;line-height:1.6}
+.dl{margin-top:10px;min-height:48px;padding:6px 14px;display:flex;align-items:center;gap:8px;color:#fff;background:#3F4E46;border-radius:8px;text-decoration:none}
+.dl span{flex:1;display:flex;flex-direction:column;line-height:1.3;font-size:13px;font-weight:700}
+.dl small{font-weight:400;font-size:11px;opacity:.85}
+.soon{margin-top:10px;min-height:48px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:#55645C;background:#ECEEE9;border-radius:8px}
+footer{padding:24px 20px 32px;font-size:12px;line-height:1.6;color:#55645C;border-top:1px solid #DADDD6;margin-top:8px}
+.hidden{display:none}
+:focus-visible{outline:3px solid #F2C300;outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div class="top">
+    <span class="org" id="org"></span>
+    <span class="lang" role="group" aria-label="Language"><button id="b-ko" type="button">KO</button><button id="b-en" type="button">EN</button></span>
+  </div>
+  <div class="bar"></div>
+  <h1 id="h1"></h1>
+  <p class="sub" id="sub"></p>
+  <div class="meta" id="meta"></div>
+</header>
+<nav id="nav"></nav>
+<main id="main"></main>
+<footer id="foot"></footer>
+</div>
+
+<script>
+/* ===== 발표자료 파일 연결 =====
+   PDF를 materials 폴더에 넣고 아래 파일명을 채우면 '발표자료 보기' 버튼이 나타납니다.
+   비워두면 '업로드 예정'으로 표시됩니다. */
+var FILES = {
+  us: "",
+  cn: "",
+  de: "",
+  kr: ""
+};
+
+var ICON = {
+  clock:'<path d="M12 7.5V12l3 2"/><circle cx="12" cy="12" r="8.5"/>',
+  pin:'<path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>',
+  globe:'<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.4 3.6 5.3 3.6 8.5s-1.1 6.1-3.6 8.5c-2.5-2.4-3.6-5.3-3.6-8.5S9.5 5.9 12 3.5z"/>',
+  file:'<path d="M7 3.5h7l4 4V20.5H7z"/><path d="M14 3.5v4h4"/>',
+  phone:'<path d="M6 4h3l1.5 4-2 1.3a10 10 0 005.2 5.2L15 12.5l4 1.5v3a2 2 0 01-2 2A13 13 0 014 6a2 2 0 012-2z"/>'
+};
+function svg(n,s,c){return '<svg width="'+s+'" height="'+s+'" viewBox="0 0 24 24" fill="none" stroke="'+(c||'currentColor')+'" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+ICON[n]+'</svg>';}
+
+var MAP = "https://map.naver.com/p/search/" + encodeURIComponent("HJ비즈니스센터 광화문");
+
+var T = {
+ko:{
+  title:"대전환기 글로벌 자동차산업, 전환 경로와 일의 미래",
+  sub:"미국·중국·독일·한국의 경험과 시사점",
+  org:"한국노동연구원-서울대학교 공동 콜로키움",
+  date:"2026.11.26 (목) 13:00–17:00",
+  venue:"서울 광화문 HJ비즈니스센터 세미나룸 D",
+  lang:"한·영 동시통역",
+  tabs:["안내","일정"],
+  info:"행사 안내", dtl:"일시", dtv:"2026년 11월 26일(목) 13:00–17:00", dtn:"등록 12:30부터",
+  vl:"장소", ll:"언어", map:"지도에서 장소 보기",
+  about:"소개",
+  aboutP:["탈탄소화와 전동화, 디지털 기술의 발전, 글로벌 경쟁 구도의 재편 속에서 자동차산업은 생산 체계와 고용, 노사관계까지 큰 변화를 겪고 있습니다.","이번 콜로키움은 미국·중국·독일의 전환 과정을 살펴보고 한국과 비교하며, 지속가능하고 사회적으로 정의로운 산업전환을 위한 정책적 시사점을 모색합니다."],
+  orgsH:"주최", orgs:"한국노동연구원\nKLI|서울대학교\n아시아연구소",
+  ctH:"문의", ct:"국제협력팀 · 044-287-6092",
+  prog:"프로그램", pd:"2026.11.26 (목)",
+  view:"발표자료 보기", soon:"발표자료 업로드 예정",
+  foot:"주최 한국노동연구원 · 서울대학교 아시아연구소<br>문의 국제협력팀 044-287-6092",
+  sched:[
+   {b:"12:30–13:00",n:"등록"},
+   {s:"세션 I",n:"자동차산업의 전환과 노동 – 국제비교",c:"사회 권현지 (서울대학교)"},
+   {t:"13:00–13:25",k:"발표 1",n:"미국 자동차산업의 전환과 노동",p:["이언 그리어 (코넬대학교 노사관계대학)"],f:"us"},
+   {t:"13:25–13:50",k:"발표 2",n:"중국 자동차산업의 전환과 노동",p:["보이 뤼트예 (남중국공과대학)"],f:"cn"},
+   {t:"13:50–14:15",k:"발표 3",n:"독일 자동차산업의 전환과 노동",p:["하요 홀스트 (오스나브뤼크대학)"],f:"de"},
+   {t:"14:15–14:45",k:"지정토론",p:["메튜 뒤퓌 (라발대학교)","윤종석 (서울시립대학교)","이문호 (워크인연구소)"]},
+   {b:"14:45–15:00",n:"휴식"},
+   {s:"세션 II",n:"한국 자동차산업의 전환과 함의",c:"사회 박명준 (한국노동연구원)"},
+   {t:"15:00–15:25",k:"발표",n:"한국 자동차산업의 전환 – 과제와 전망",p:["조형제 (울산대학교)"],f:"kr"},
+   {t:"15:25–15:55",k:"지정토론",p:["조성재 (한국노동연구원)","김경유 (산업연구원)"]},
+   {s:"세션 III",n:"종합토론: 글로벌 산업전환의 교훈과 한국 노사의 대응",c:"사회 박명준 (한국노동연구원)"},
+   {t:"16:00–17:00",k:"패널",p:["그레고어 머리 (몬트리올대학교)","슈테파니 휘르트겐 (잘츠부르크대학교)","김주홍 (한국자동차모빌리티산업협회)","이원재 (전국금속노동조합)","나병호 (전국금속노동조합연맹)"]}
+  ]
+},
+en:{
+  title:"The Global Automotive Industry in an Era of Profound Change",
+  sub:"Transition Pathways and the Future of Work — Experiences and Implications from the United States, China, Germany, and Korea",
+  org:"KLI–SNU JOINT COLLOQUIUM",
+  date:"Thu, Nov 26, 2026 · 1:00–5:00 PM",
+  venue:"Seminar Room D, HJ Business Center, Gwanghwamun, Seoul",
+  lang:"Korean–English simultaneous interpretation",
+  tabs:["Info","Schedule"],
+  info:"Event Information", dtl:"Date & time", dtv:"Thursday, November 26, 2026 · 1:00–5:00 PM", dtn:"Registration opens at 12:30 PM",
+  vl:"Venue", ll:"Language", map:"View venue on map",
+  about:"About",
+  aboutP:["The global automotive industry is undergoing profound changes driven by decarbonization and electrification, advances in digital technologies, and the reshaping of global competition, affecting production systems, employment, and industrial relations.","The colloquium examines how work and employment are changing in the United States, China, and Germany, compares them with Korea, and explores policy implications for a sustainable and socially just industrial transition."],
+  orgsH:"Organizers", orgs:"Korea Labor\nInstitute (KLI)|SNU Asia\nCenter (SNUAC)",
+  ctH:"Contact", ct:"International Cooperation Team · +82-44-287-6092",
+  prog:"Program", pd:"Nov 26, 2026",
+  view:"View slides", soon:"Slides coming soon",
+  foot:"Organized by Korea Labor Institute and the Seoul National University Asia Center<br>Inquiries International Cooperation Team +82-44-287-6092",
+  sched:[
+   {b:"12:30–1:00",n:"Registration"},
+   {s:"Session I",n:"Automotive Industry Transition and Labor — An International Comparison",c:"Chair: Hyunji Kwon (Seoul National University)"},
+   {t:"1:00–1:25",k:"Presentation 1",n:"Transition and Labor in the U.S. Automotive Industry",p:["Ian Greer (ILR School, Cornell University)"],f:"us"},
+   {t:"1:25–1:50",k:"Presentation 2",n:"Transition and Labor in the Chinese Automotive Industry",p:["Boy Lüthje (South China University of Technology)"],f:"cn"},
+   {t:"1:50–2:15",k:"Presentation 3",n:"Transition and Labor in the German Automotive Industry",p:["Hajo Holst (Osnabrück University)"],f:"de"},
+   {t:"2:15–2:45",k:"Designated Discussion",p:["Mathieu Dupuis (Université Laval)","Jongseok Yoon (University of Seoul)","Moon-Ho Lee (Work-In Research Institute)"]},
+   {b:"2:45–3:00",n:"Coffee Break"},
+   {s:"Session II",n:"Transition in Korea’s Automotive Industry and Its Implications",c:"Chair: Myung-Joon Park (Korea Labor Institute)"},
+   {t:"3:00–3:25",k:"Presentation",n:"Transition in Korea’s Automotive Industry — Challenges and Prospects",p:["Hyung Je Jo (University of Ulsan)"],f:"kr"},
+   {t:"3:25–3:55",k:"Designated Discussion",p:["Seong-Jae Cho (Korea Labor Institute)","Kyoung You Kim (Korea Institute for Industrial Economics and Trade)"]},
+   {s:"Session III",n:"Closing Discussion: Lessons from Global Industrial Transitions and Korean Labor–Management Responses",c:"Chair: Myung-Joon Park (Korea Labor Institute)"},
+   {t:"4:00–5:00",k:"Panelists",p:["Gregor Murray (Université de Montréal)","Stefanie Hürtgen (University of Salzburg)","Juhong Kim (Korea Automobile and Mobility Association, KAMA)","Won-Jae Lee (Korean Metal Worker’s Union)","Byung Ho Na (Federation of Korean Metalworkers’ Trade Unions)"]}
+  ]
+}
+};
+
+var lang = (function(){
+  var q = /[?&]lang=(ko|en)/.exec(location.search);
+  if(q) return q[1];
+  try{ var s = localStorage.getItem("lang"); if(s==="ko"||s==="en") return s; }catch(e){}
+  return (navigator.language||"ko").toLowerCase().indexOf("ko")===0 ? "ko" : "en";
+})();
+var tab = location.hash === "#schedule" ? 1 : 0;
+
+function row(ic,l,v,n){
+  return '<div class="row"><div class="ico">'+svg(ic,17)+'</div><div><div class="lbl">'+l+'</div><div class="val">'+v+(n?'<div class="note">'+n+'</div>':'')+'</div></div></div>';
+}
+function info(t){
+  var h = '<h2>'+t.info+'</h2>'
+   + row('clock',t.dtl,t.dtv,t.dtn) + row('pin',t.vl,t.venue) + row('globe',t.ll,t.lang)
+   + '<a class="btn-o" href="'+MAP+'" target="_blank" rel="noopener">'+svg('pin',18)+t.map+'</a>'
+   + '<h3>'+t.about+'</h3>' + t.aboutP.map(function(x){return '<p>'+x+'</p>';}).join("")
+   + '<h3>'+t.orgsH+'</h3><div class="orgs">'+t.orgs.split("|").map(function(x){return '<div>'+x+'</div>';}).join("")+'</div>'
+   + '<h3>'+t.ctH+'</h3><a class="tel" href="tel:+82442876092">'+svg('phone',18,'#3F4E46')+t.ct+'</a>';
+  return h;
+}
+function sched(t){
+  var h = '<div class="sh"><h2 style="margin:0">'+t.prog+'</h2><span class="note">'+t.pd+'</span></div>';
+  t.sched.forEach(function(x){
+    if(x.b){ h += '<div class="brk"><div class="t">'+x.b+'</div><div class="l"><span>'+x.n+'</span></div></div>'; return; }
+    if(x.s){ h += '<div class="ses"><span class="tag">'+x.s+'</span><div class="n">'+x.n+'</div><div class="c">'+x.c+'</div></div>'; return; }
+    var body = '<div class="k">'+x.k+'</div>' + (x.n?'<div class="ti">'+x.n+'</div>':'') + '<div class="pp">'+x.p.map(function(p){return '<div>'+p+'</div>';}).join("")+'</div>';
+    if(x.f){
+      var file = FILES[x.f];
+      body += file
+        ? '<a class="dl" href="materials/'+encodeURIComponent(file)+'" download>'+svg('file',16)+'<span>'+t.view+'<small>'+file.split(".").pop().toUpperCase()+'</small></span></a>'
+        : '<span class="soon">'+t.soon+'</span>';
+    }
+    h += '<div class="it"><div class="t">'+x.t+'</div><div class="card">'+body+'</div></div>';
+  });
+  return h;
+}
+function render(){
+  var t = T[lang];
+  document.documentElement.lang = lang;
+  document.title = t.title;
+  document.getElementById("org").textContent = t.org;
+  document.getElementById("org").style.letterSpacing = lang==="en" ? "0.14em" : "0.01em";
+  document.getElementById("h1").textContent = t.title;
+  document.getElementById("h1").style.fontSize = lang==="en" ? "21px" : "23px";
+  document.getElementById("sub").textContent = t.sub;
+  document.getElementById("meta").innerHTML =
+    '<div>'+svg('clock',16)+'<span>'+t.date+'</span></div><div>'+svg('pin',16)+'<span>'+t.venue+'</span></div><div>'+svg('globe',16)+'<span>'+t.lang+'</span></div>';
+  document.getElementById("b-ko").className = lang==="ko" ? "on" : "";
+  document.getElementById("b-en").className = lang==="en" ? "on" : "";
+  var nav = document.getElementById("nav");
+  nav.innerHTML = t.tabs.map(function(n,i){return '<button type="button" data-i="'+i+'" class="'+(i===tab?'on':'')+'">'+n+'</button>';}).join("");
+  Array.prototype.forEach.call(nav.children,function(b){ b.onclick=function(){ tab=+b.getAttribute("data-i"); history.replaceState(null,"",tab?"#schedule":"#info"); render(); window.scrollTo(0,0); }; });
+  document.getElementById("main").innerHTML = tab===0 ? info(t) : sched(t);
+  document.getElementById("foot").innerHTML = t.foot;
+}
+function setLang(l){ lang=l; try{localStorage.setItem("lang",l);}catch(e){} render(); }
+document.getElementById("b-ko").onclick = function(){ setLang("ko"); };
+document.getElementById("b-en").onclick = function(){ setLang("en"); };
+render();
+</script>
+</body>
+</html>
